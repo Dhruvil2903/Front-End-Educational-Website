@@ -1,20 +1,20 @@
 export const courses = [{
     id: 1,
-    title: "Pathology",
+    courseName: "Pathology",
     icon: "patho",
-    instructorName: "Hiral Patel"
+    courseDescription: "Hiral Patel"
 },
 {
     id: 2,
-    title: "Pharma",
+    courseName: "Pharma",
     icon: "patho",
-    instructorName: "Hiral Patel"
+    courseDescription: "Hiral Patel"
 },
 {
     id : 3,
     title: "Pediatric",
     icon: "patho",
-    instructorName: "Hiral Patel"
+    courseDescription: "Hiral Patel"
 }
 
 

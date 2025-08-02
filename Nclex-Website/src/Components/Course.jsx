@@ -1,24 +1,85 @@
-import React from 'react'
-import { courses } from "./Index";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
 const Course = () => {
+  const [courses, setCourses] = useState([]);
+  const [courseName, setCourseName] = useState('');
+  const [courseDescription, setCourseDescription] = useState('');
+
+  // Fetch all courses
+  const fetchCourses = () => {
+    axios.get('http://localhost:8083/api/courses')
+      .then(response => setCourses(response.data))
+      .catch(error => console.error(error));
+  };
+
+  useEffect(() => {
+    fetchCourses();
+  }, []);
+
+  // Add course
+  const handleAdd = () => {
+    if (!courseName || !courseDescription) return;
+    axios.post('http://localhost:8083/api/courses/createCourse', { courseName, courseDescription })
+      .then(() => {
+        fetchCourses(); // Refresh course list
+        setCourseName('');
+        setCourseDescription('');
+      });
+  };
+
+  // Delete course
+  const handleDelete = (id) => {
+    axios.delete(`http://localhost:8083/api/courses/${id}`)
+      .then(() => fetchCourses());
+  };
+
   return (
-    <>
+    <div className="p-4 max-w-3xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6 text-center">Course Management</h1>
 
-      <h3 className='text-center font-bold text-2xl'>Courses</h3>
-      <div className='flex justify-center bg-blue-500 text-white py-4 rounded-2xl m-2'>
-        <div className='w-full max-w-4xl px-4'>
-          <ul className='flex flex-col sm:flex-row gap-6 sm:gap-10 justify-between items-center sm:text-center leading-[53px] font-bold'>
-            {courses.map((course, index) => (
-              <li key={course.id} className={`w-full sm:w-auto ${index === 0 ? 'text-left' : index === 1 ? 'text-center' : 'text-right'} hover:scale-105 hover:transition-transform duration-300 ease-in-out hover:bg-white hover:text-black rounded-2xl p-2`}>
-                <a href={`#${course.id}`}>{course.title}</a>
-              </li>
-
-            ))}
-          </ul>
-        </div>
+      {/* Add New Course */}
+      <div className="flex flex-col gap-4 mb-6 bg-gray-100 p-4 rounded-xl shadow">
+        <input
+          type="text"
+          placeholder="Course Title"
+          value={courseName}
+          onChange={(e) => setCourseName(e.target.value)}
+          className="p-2 border rounded"
+        />
+        <textarea
+          placeholder="Course Description"
+          value={courseDescription}
+          onChange={(e) => setCourseDescription(e.target.value)}
+          className="p-2 border rounded"
+        />
+        <button
+          onClick={handleAdd}
+          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+        >
+          Add Course
+        </button>
       </div>
-    </>
-  )
-}
 
-export default Course
+      {/* List of Courses */}
+      <ul className="space-y-4">
+        {courses.map(course => (
+          <li key={course.id} className="p-4 bg-white shadow rounded flex justify-between items-center">
+            <div>
+              <h3 className="text-xl font-semibold">{course.courseName}</h3>
+              <p className="text-gray-600">{course.courseDescription}</p>
+            </div>
+            <button
+              onClick={() => handleDelete(course.id)}
+              className="text-red-500 hover:text-red-700"
+            >
+              Delete
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Course;

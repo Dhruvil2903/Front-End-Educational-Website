@@ -12,7 +12,7 @@ const Hero = () => {
                     <div className='overflow-hidden whitespace-nowrap'>
                         <p className='text-red-700 font-semibold animate-pulse'>🚀Learn Smart, Pass Fast🚀</p>
                     </div>
-                    <Link to={"/"}
+                    <Link to={"/about"}
 
                         className="group inline-flex items-center text-green-600 hover:text-green-800 font-medium transition-all duration-300"
                     >

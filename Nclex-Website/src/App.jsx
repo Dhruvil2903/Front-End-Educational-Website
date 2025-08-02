@@ -10,6 +10,13 @@ import Footer from './Components/Footer'
 import Login from './Home/Login'
 import Register from './Home/Register'
 import Course from './Components/Course'
+import Patho from './Home/Patho'
+import Dashboard from './Home/Dashboard'
+import ProtectedRoute from './Context/ProtectedRoute'
+import Pharma from './Home/Pharma'
+import Pediatric from './Home/Pediatric'
+import Pricing from './Home/Pricing'
+import About from './Home/About'
 
 function App() {
   return (
@@ -42,6 +49,34 @@ function App() {
               </>
             }
           />
+         <Route path='/dashboard' element ={
+          <ProtectedRoute>
+            <Dashboard/>
+          </ProtectedRoute>
+         }/>
+          <Route path='/patho' element={
+            <ProtectedRoute>
+              <Patho/>
+            </ProtectedRoute>}/>
+            <Route path='/pharma' element = {
+              <ProtectedRoute>
+                <Pharma/>
+              </ProtectedRoute>
+            }/>
+            <Route path = '/pediatric' element = {
+              <ProtectedRoute>
+                <Pediatric/>
+              </ProtectedRoute>
+            }/>
+            <Route path = '/about' element = {
+              <About/>
+            }/>
+            <Route path = '/course' element = {
+              <ProtectedRoute>
+                <Course/>
+              </ProtectedRoute>
+            }/>
+          <Route path='/pricing' element = {<Pricing/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
