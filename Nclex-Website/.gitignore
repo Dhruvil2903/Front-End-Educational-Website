@@ -8,11 +8,18 @@ pnpm-debug.log*
 lerna-debug.log*
 
 build/
-node_modules
-dist
+node_modules/
+dist/
 dist-ssr
 *.local
 
+
+#Environmental Variable
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 # Mac_OS system files
 .DS_Store
 # Editor directories and files

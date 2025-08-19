@@ -47,7 +47,7 @@ const Register = () => {
           <p className='text-gray-700'>Register here</p>
           <form onSubmit={handleSubmit} className='max-w-xl' action="">
             <label className='m-2 ' htmlFor='username'>E-Mail:</label><br />
-            <input className='border p-2 m-2 rounded' type='email' value={username} onChange={(e) => { setusername(e.target.value) }} placeholder='Enter your E-Mail' /><br />
+            <input className='border p-2 m-2 rounded' type='text' value={username} onChange={(e) => { setusername(e.target.value) }} placeholder='Enter your E-Mail' /><br />
             <label className='m-2' htmlFor='password'>Password:</label><br />
             <input className='border p-2 m-2 rounded' type='password' value={password} onChange={(e) => { setpassword(e.target.value) }} placeholder='Enter your password' /><br />
             <button className='border bg-blue-700 text-white m-2 rounded-2xl p-2 hover:bg-white hover:text-black hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out'>Submit</button>

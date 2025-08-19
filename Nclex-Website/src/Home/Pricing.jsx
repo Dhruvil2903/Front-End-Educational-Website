@@ -45,7 +45,7 @@ const Pricing = () => {
 
           {plans.map((plan, index) => (
             <div key={index} className='bg-gray-800 p-6 rounded-2xl shadow-2xl text-white transform transition-transform duration-300 ease-in-out hover:scale-105 hover:border hover:border-white'>
-              <h2 className='text-xl font-semibold bg-gradient-to-r from-pink-700 to-orange-400 bg-clip-text text-transparent mb-4 text-center'>
+              <h2 className='text-xl font-semibold bg-gradient-to-r from-blue-700 to-white bg-clip-text text-transparent mb-4 text-center'>
                 Price for Nclex-RN
               </h2>
 
@@ -58,7 +58,8 @@ const Pricing = () => {
               </ul>
 
               <div className='flex justify-center mt-8'>
-                <button className='bg-gradient-to-r from-pink-700 to-orange-300 py-3 px-6 rounded-xl font-semibold text-xl hover:border hover:border-white hover:scale-105 transition-transform duration-300 ease-in-out'>
+                <button className='bg-gradient-to-r text-black from-blue-700 to-white py-3 px-6 rounded-xl font-semibold text-xl hover:border hover:border-white hover:scale-105 transition-transform duration-300 ease-in-out shadow-2xl cursor-pointer'>
+
                   {plan.price}
                 </button>
               </div>

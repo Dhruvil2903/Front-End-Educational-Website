@@ -38,7 +38,7 @@ const Course = () => {
     <div className="p-4 max-w-3xl mx-auto">
       <h1 className="text-3xl font-bold mb-6 text-center">Course Management</h1>
 
-      {/* Add New Course */}
+      
       <div className="flex flex-col gap-4 mb-6 bg-gray-100 p-4 rounded-xl shadow">
         <input
           type="text"

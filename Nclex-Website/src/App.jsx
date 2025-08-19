@@ -11,24 +11,26 @@ import Login from './Home/Login'
 import Register from './Home/Register'
 import Course from './Components/Course'
 import Patho from './Home/Patho'
-import Dashboard from './Home/Dashboard'
+
 import ProtectedRoute from './Context/ProtectedRoute'
 import Pharma from './Home/Pharma'
 import Pediatric from './Home/Pediatric'
 import Pricing from './Home/Pricing'
 import About from './Home/About'
+import Dashboard from './Student Dashboard/Dashboard'
+
 
 function App() {
   return (
     <Router>
-      <div className='bg-gray-50'>
+      <div className='bg-gray-50 '>
         <Routes>
           <Route
             path="/"
             element={
               <>
-                <div className='flex justify-center items-center sm:px-16 px-6'>
-                  <div className='xl:max-w-[1280px] w-full'>
+                <div className='flex justify-center items-center sm:px-16 px-6 '>
+                  <div className='xl:max-w-[1480px] w-full'>
                     <Navbar />
                   </div>
                 </div>
@@ -42,7 +44,6 @@ function App() {
                     <WhyToChoose />
                     <Instructors />
                     <Testimonial />
-                    <Course/>
                     <Footer />
                   </div>
                 </div>
