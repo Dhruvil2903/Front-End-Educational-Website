@@ -23,10 +23,10 @@ import Dashboard from './Student Dashboard/Dashboard'
 function App() {
   return (
     <Router>
-      <div className='bg-gray-50 '>
+      <div className='bg-black '>
         <Routes>
           <Route
-            path="/"
+            path="/home"
             element={
               <>
                 <div className='flex justify-center items-center sm:px-16 px-6 '>

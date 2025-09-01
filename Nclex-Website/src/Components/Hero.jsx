@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
     return (
         <div className='flex justify-center p-4 '>
-            <div className='flex flex-col md:flex-row items-center gap-6 bg-white h-auto justify-center shadow-2xl border-gray-200 rounded-3xl p-6 max-w-5xl w-full'>
+            <div className='flex flex-col md:flex-row items-center gap-6 bg-neutral-950 h-auto justify-center shadow-2xl border-gray-200 rounded-3xl shadow-white p-6 max-w-5xl w-full'>
                 <div className='flex-1 space-y-4'>
-                    <h1 className='text-2xl md:text-3xl font-semibold text-gray-800'>Welcome to <span className='bg-gradient-to-r from-blue-500 to-black  font-bold bg-clip-text text-transparent'>PULSEPOINT</span> </h1>
-                    <p className='text-gray-600 text-lg leading-relaxed'>This is the website for your better future. Prepare smarter, pass faster with our expert-guided NCLEX-RN classes.</p>
+                    <h1 className='text-2xl md:text-3xl font-semibold text-white'>Welcome to <span className='bg-gradient-to-r from-blue-500 to-white  font-bold bg-clip-text text-transparent'>PULSEPOINT</span> </h1>
+                    <p className='bg-gradient-to-r from-blue-400 to-yellow-400 bg-clip-text text-transparent text-lg font-open leading-relaxed'>This is the website for your better future. Prepare smarter, pass faster with our expert-guided NCLEX-RN classes.</p>
                     <div className='overflow-hidden whitespace-nowrap'>
-                        <p className='text-red-700 font-semibold animate-pulse'>🚀Learn Smart, Pass Fast🚀</p>
+                        <p className='text-green-300 font-semibold font-open animate-pulse'>🚀Learn Smart, Pass Fast🚀</p>
                     </div>
                     <Link to={"/about"}
 
@@ -28,13 +28,13 @@ const Hero = () => {
                         </svg>
                     </Link>
                 </div>
-                <div className="flex flex-col items-center bg-gradient-to-br from-blue-600 to-indigo-400 p-4 rounded-2xl text-white shadow-lg w-full md:w-[300px]">
+                <div className="flex flex-col items-center p-4 rounded-2xl text-white shadow-lg w-full md:w-[300px]">
                     <img
                         src={NursingHome}
                         alt="Stethoscope"
                         className="w-[300px] h-[200px] object-cover mb-4 drop-shadow-lg"
                     />
-                    <p className="text-center text-white text-lg font-semibold">
+                    <p className="text-center bg-gradient-to-r from-lime-700 to-white bg-clip-text text-transparent  text-lg font-semibold font-open">
                         Know more about us by clicking link 👈🏻
                     </p>
                 </div>

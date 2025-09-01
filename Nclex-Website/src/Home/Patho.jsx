@@ -4,7 +4,7 @@ const Patho = () => {
   
   return (
     <div>
-
+        
     </div>
   )
 }

@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 } */
+
+.borderBlue{
+  border: 1;
+  border-color: blue;
+}
