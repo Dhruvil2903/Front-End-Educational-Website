@@ -9,26 +9,26 @@ const Footer = () => {
             <div className='grid md:grid-cols-3 grid-rows-1 bg-black text-white p-4 rounded-xl m-2 font-semibold border-t-2 font-open'>
 
                 {/* Navigation Column */}
-                <div className='flex flex-col items-center text-center'>
+                <div className='flex flex-col items-center text-center '>
                     <h2 className='font-bold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent  md:shadow-xl mb-2'>Navigation</h2>
                     <ul className='space-y-2'>
                         <li>
-                            <Link to="/home" className=' borderBlue hover:bg-white hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out px-4 py-1 rounded-2xl block'>
+                            <Link to="/home" className=' border border-blue-700 hover:bg-white hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out px-4 py-1 rounded-2xl block'>
                                 Home
                             </Link>
                         </li>
                         <li>
-                            <Link to="/course" className='hover:bg-white hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out px-4 py-1 rounded-2xl block'>
+                            <Link to="/course" className='border border-green-700 hover:bg-white hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out px-4 py-1 rounded-2xl block'>
                                 Courses
                             </Link>
                         </li>
                         <li>
-                            <Link to="/about" className='hover:bg-white hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out px-4 py-1 rounded-2xl block'>
+                            <Link to="/about" className='border border-pink-700 hover:bg-white hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out px-4 py-1 rounded-2xl block'>
                                 About Us
                             </Link>
                         </li>
                         <li>
-                            <Link to="/pricing" className='hover:bg-white hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out px-4 py-1 rounded-2xl block'>
+                            <Link to="/pricing" className='border border-yellow-700 hover:bg-white hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out px-4 py-1 rounded-2xl block'>
                                 Pricing
                             </Link>
                         </li>

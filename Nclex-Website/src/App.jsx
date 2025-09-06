@@ -26,7 +26,7 @@ function App() {
       <div className='bg-black '>
         <Routes>
           <Route
-            path="/home"
+            path="/"
             element={
               <>
                 <div className='flex justify-center items-center sm:px-16 px-6 '>

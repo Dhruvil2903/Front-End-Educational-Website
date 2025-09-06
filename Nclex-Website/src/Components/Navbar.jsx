@@ -18,7 +18,7 @@ const Navbar = () => {
 
         <div className='p-4 m-2 bg-black text-white rounded-2xl font-open'>
             <div className='flex justify-between items-center'>
-                <div className=' bg-gradient-to-r from-blue-700 to-orange-300 bg-clip-text text-transparent text-2xl font-bold'>
+                <div className=' bg-gradient-to-r from-blue-700 to-orange-300 bg-clip-text text-transparent text-2xl     font-bold'>
                     PulsePoint
                 </div>
                 <button className='md:hidden text-white' onClick={() => { setIsOpen(!isOpen) }}>
