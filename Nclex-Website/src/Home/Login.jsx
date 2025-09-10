@@ -9,7 +9,7 @@ import Loader from '../Components/Loader'
 const Login = () => {
   const navigate = useNavigate('');
   const { setLogin } = useContext(AuthContext);
-  const [username, setUsername] = useState("");
+  const [userName, setUsername] = useState("");
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
@@ -21,13 +21,13 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
 
-    fetch("http://localhost:8081/api/auth/getLogin", {
+    fetch("http://localhost:8081/api/auth/getUser", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        userName: username,
+        userName: userName,
         password: password
       })
     })
@@ -65,7 +65,7 @@ const Login = () => {
           <p className='bg-gradient-to-r from-purple-400 to-orange-400 bg-clip-text text-transparent '>Login here</p>
           <form onSubmit={handleSubmit} className='max-w-xl ' action="">
             <label className='m-2 font-semibold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent ' htmlFor='username'>E-Mail:</label><br />
-            <input className='border-2 p-2 m-2 rounded text-white ' value={username} onChange={(e) => { setUsername(e.target.value) }} type='text' placeholder='Enter your username' /><br />
+            <input className='border-2 p-2 m-2 rounded text-white ' value={userName} onChange={(e) => { setUsername(e.target.value) }} type='text' placeholder='Enter your username' /><br />
             <label className='m-2 font-semibold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent ' htmlFor='password'>Password:</label><br />
             <input className='border-2 p-2 m-2 rounded text-white' value={password} onChange={(e) => { setPassword(e.target.value) }} type='password' placeholder='Enter your password' /><br />
             <button

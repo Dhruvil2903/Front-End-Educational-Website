@@ -18,6 +18,8 @@ import Pediatric from './Home/Pediatric'
 import Pricing from './Home/Pricing'
 import About from './Home/About'
 import Dashboard from './Student Dashboard/Dashboard'
+import Success from './Home/Success'
+import Cancel from './Home/Cancel'
 
 
 function App() {
@@ -26,7 +28,7 @@ function App() {
       <div className='bg-black '>
         <Routes>
           <Route
-            path="/"
+            path="/home"
             element={
               <>
                 <div className='flex justify-center items-center sm:px-16 px-6 '>
@@ -78,6 +80,8 @@ function App() {
               </ProtectedRoute>
             }/>
           <Route path='/pricing' element = {<Pricing/>}/>
+          <Route path='/success' element ={<Success/>}/>
+          <Route path ='/cancel' element = {<Cancel/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
     return (
         <div className='flex justify-center p-4 '>
-            <div className='flex flex-col md:flex-row items-center gap-6 bg-neutral-950 h-auto justify-center shadow-2xl border-gray-200 rounded-3xl shadow-white p-6 max-w-5xl w-full'>
+            <div className='flex flex-col md:flex-row items-center gap-6 bg-neutral-950 h-auto justify-center  border-gray-200 rounded-3xl shadow-white p-6 max-w-5xl w-full'>
                 <div className='flex-1 space-y-4'>
                     <h1 className='text-2xl md:text-3xl font-semibold text-white'>Welcome to <span className='bg-gradient-to-r from-blue-500 to-white  font-bold bg-clip-text text-transparent'>PULSEPOINT</span> </h1>
                     <p className='bg-gradient-to-r from-blue-400 to-yellow-400 bg-clip-text text-transparent text-lg font-open leading-relaxed'>This is the website for your better future. Prepare smarter, pass faster with our expert-guided NCLEX-RN classes.</p>
@@ -32,7 +32,7 @@ const Hero = () => {
                     <img
                         src={NursingHome}
                         alt="Stethoscope"
-                        className="w-[300px] h-[200px] object-cover mb-4 drop-shadow-lg"
+                        className="w-[300px] h-[200px] object-cover mb-4 drop-shadow-lg rounded-t-2xl"
                     />
                     <p className="text-center bg-gradient-to-r from-lime-700 to-white bg-clip-text text-transparent  text-lg font-semibold font-open">
                         Know more about us by clicking link 👈🏻
